@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    @apply size-full;
+}
+
+
+.section_title {
+    @apply text-4xl md:text-6xl underline font-bold flex items-center justify-center py-10;
+}

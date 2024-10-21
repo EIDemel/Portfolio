@@ -44,22 +44,21 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="grid grid-rows-20-80">
-    <div class="flex items-center justify-center pt-40">
-      <h1 class="text-6xl underline font-bold">Skills</h1>
-    </div>
-    <section id="skills" ref="skillsRef" class="pt-40 grid grid-cols-3 gap-4 p-8">
-      <div
-          v-for="(skill, index) in skills"
-          :key="index"
-          class="card opacity-0 transform transition-all duration-500 flex items-center justify-center text-3xl"
-          ref="cards"
-      >
-        {{ skill.name }}
+  <section id="skills" class="skills section">
+    <h1 class="section_title ">Compétences</h1>
+    <div ref="skillsRef" class="pt-40 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-8" >
+        <div
+            v-for="(skill, index) in skills"
+            :key="index"
+            class="card opacity-0 transform transition-all duration-500 flex items-center justify-center text-xl md:text-2xl"
+            ref="cards"
+        >
+          {{ skill.name }}
+        </div>
       </div>
-    </section>
-  </div>
+  </section>
 </template>
+
 
 <style scoped>
 .card {
