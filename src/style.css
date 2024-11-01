@@ -2,13 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
-.section{
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-    @apply size-full;
+@font-face {
+    font-family: 'Area InkTrap';
+    src: url('/assets/fonts/Area_Inktrap.otf') format('opentype'); /* Assure-toi du chemin */
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Palette de couleurs pastel */
+:root {
+    --blue-pastel: #037B99;
+    --light-blue-pastel: #A3C1DA;
+    --red-pastel: #D25D31;
+    --light-red-pastel: #F9AA92;
+    --green-pastel: #027A63;
+    --light-green-pastel: #ACDBC9;
+    --gray-dark: #333;
+    --gray-light: #f5f5f5;
+}
 
-.section_title {
-    @apply text-4xl md:text-6xl underline font-bold flex items-center justify-center py-10;
+/* Masquer le bouton radio de base */
+.radio-input {
+    display: none;
+}
+
+/* Style de la boîte du bouton radio */
+.custom-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style du bouton radio personnalisé agrandi */
+.radio-style {
+    width: 24px; /* Taille augmentée */
+    height: 24px; /* Taille augmentée */
+    border: 3px solid #000; /* Bordure plus épaisse */
+    border-radius: 50%; /* Forme ronde */
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    transition: border-color 0.3s ease; /* Transition de la couleur de la bordure */
+}
+
+.radio-style:hover {
+    background-color: #ACDBC9;
+    width: 24px; /* Taille du cercle extérieur */
+    height: 24px; /* Taille du cercle extérieur */
+
+}
+
+/* Point central dans le bouton radio */
+.radio-style:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Taille initiale pour effet de zoom */
+    width: 14px; /* Taille du point */
+    height: 14px; /* Taille du point */
+    background-color: #000;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Transition pour l'animation */
+}
+
+/* Animation pour agrandir le point lorsqu'il est coché */
+.radio-input:checked + .radio-style:before {
+    transform: translate(-50%, -50%) scale(1); /* Agrandissement */
+}
+
+/* Style pour le cercle extérieur lorsque le bouton est coché */
+.radio-input:checked + .radio-style {
+    border: none; /* Supprime la bordure du petit cercle */
+}
+
+.radio-input:checked + .radio-style:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px; /* Taille du cercle extérieur */
+    height: 48px; /* Taille du cercle extérieur */
+    border: 3px solid #000; /* Bordure du cercle extérieur */
+    border-radius: 50%;
+    transition: opacity 0.3s ease; /* Transition de l'opacité */
+    opacity: 1; /* Visibilité par défaut */
+}
+
+/* Masquer le cercle extérieur lorsque le bouton n'est pas coché */
+.radio-input:not(:checked) + .radio-style:after {
+    opacity: 0; /* Masque le cercle extérieur */
+}
+
+.question-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s;
+}
+
+body {
+    font-family: 'Area InkTrap', sans-serif;
 }

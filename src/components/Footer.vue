@@ -1,16 +1,7 @@
 <template>
 
-  <footer class="bg-gray-800 text-white py-6">
+  <footer class="bg-[#50636D] text-white py-6">
     <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-      <!-- Section de navigation -->
-      <div class="mb-4 md:mb-0">
-        <ul class="flex flex-wrap gap-4">
-          <li><a href="#home" class="hover:text-gray-400">Accueil</a></li>
-          <li><a href="#about" class="hover:text-gray-400">À propos</a></li>
-          <li><a href="#skills" class="hover:text-gray-400">Compétences</a></li>
-          <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
-        </ul>
-      </div>
 
       <!-- Section des liens sociaux -->
       <div class="mb-4 md:mb-0 flex gap-4">
@@ -28,20 +19,10 @@
 
       <!-- Copyright -->
       <div class="text-sm">
-        &copy; 2024 Léo Demeilliers. Tous droits réservés.
+        &copy; 2024 Léo Demeilliers.
       </div>
     </div>
   </footer>
 
 
 </template>
-
-<script>
-export default {
-  name: "footer"
-}
-</script>
-
-<style scoped>
-
-</style>
