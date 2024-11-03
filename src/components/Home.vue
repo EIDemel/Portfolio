@@ -15,7 +15,7 @@
       <!-- Deuxième section à 47.6% de la largeur -->
       <div class="w-[47.5%] home_data">
         <h1 className="home_title fancy-underline">
-          MESSANA
+          MENSSANA
         </h1>
         <h1 className="home_subtitle ">
           Le questionnaire qui va te permettre de découvrir quel athlète tu es !
