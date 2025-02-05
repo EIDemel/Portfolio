@@ -60,7 +60,6 @@ onMounted(() => {
 
 <template>
   <section id="about" class="about section">
-    <h1 class="section_title ">À propos</h1>
     <div class="about_data">
       <div>
         <h1 class="about_subtitle">Bonjour</h1>
